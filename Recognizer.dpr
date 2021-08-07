@@ -1,14 +1,14 @@
-program Project1;
+program Recognizer;
 
 uses
   Vcl.Forms,
-  Unit1 in 'Unit1.pas' {Form1};
+  MainForm in 'MainForm.pas' {RecognizerForm};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TRecognizerForm, RecognizerForm);
   Application.Run;
 end.

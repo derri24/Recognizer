@@ -1,4 +1,4 @@
-unit Unit1;
+﻿unit MainForm;
 
 interface
 
@@ -8,7 +8,7 @@ uses
     Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
 
 type
-    TForm1 = class(TForm)
+    TRecognizerForm = class(TForm)
         Memo1: TMemo;
         Memo2: TMemo;
         Button: TButton;
@@ -21,13 +21,13 @@ type
     end;
 
 var
-    Form1: TForm1;
+    RecognizerForm: TRecognizerForm;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.ButtonClick(Sender: TObject);
+procedure TRecognizerForm.ButtonClick(Sender: TObject);
 var
     i, Index: integer;
     MyText, ResultText, AStr, RStr, BigAStr, BigRStr: String;
@@ -55,7 +55,7 @@ begin
     Memo2.Text := ResultText;
 end;
 
-procedure TForm1.Memo1Change(Sender: TObject);
+procedure TRecognizerForm.Memo1Change(Sender: TObject);
 begin
     Memo2.Text := '';
 end;
